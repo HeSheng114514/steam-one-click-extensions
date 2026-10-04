@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Steam 商店一键进插件管理页",
+  "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwI+HeMUQPWe/djF4/Y+5SHZAcAdGVJkeK+yT/P+odwzp7FO156+gYKN0xP//GX0QHZwU9FwEVnPj7pJxDaWDczzrL8t3vT7FFvDgpzPnKBXp4NzecSA62lLK7WS1UXrQKa8VqZJm5/+G3j6wke6XU9R0BmxmKk3RkaEz46lfdIfDVOfjM1G7y1CTCklXoX+XdUlO5HlzAG9VriAsdULFz9Uapw2oN6xNFK0+3IcXO5SGRLahTTUWKySTbkJBHJ3L1nHzKQNFaOpBult+J7e6HapQzmBnCiMHd7KwJr8eiEHlU4CR/dXceaC84ioh3L/BK5CaMalQPeRkHvs0IuIK6wIDAQAB",
+  "description": "在 Steam 商店页面（含 Steam 客户端内置浏览器）加一个悬浮按钮，点一下直接跳到 chrome://extensions 插件管理页。",
+  "minimum_chrome_version": "88",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "一键打开插件管理页 (chrome://extensions)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://store.steampowered.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

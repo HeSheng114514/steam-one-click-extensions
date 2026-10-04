@@ -1,0 +1,17 @@
+# 默认按文本处理并自动识别
+* text=auto
+
+# Windows 脚本用 CRLF（cmd.exe 对 LF 换行不友好）
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 源码/文档统一 LF
+*.js   text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
+*.py   text eol=lf
+
+# 图片按二进制处理
+*.png binary
+*.crx binary
