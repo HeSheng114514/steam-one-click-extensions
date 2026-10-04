@@ -16,7 +16,7 @@
 
 ### 方式一：加载已解压的扩展程序（推荐）
 
-1. 到 [Releases](../../releases) 下载 `steam-one-click-extensions-v1.0.0.zip` 并解压
+1. 到 [Releases](https://github.com/HeSheng114514/steam-one-click-extensions/releases) 下载 `steam-one-click-extensions-v1.0.0.zip` 并解压
 2. 在浏览器地址栏输入 `chrome://extensions`（Edge 会自动跳 `edge://extensions`）
 3. 打开右上角的 **开发者模式**
 4. 点 **加载已解压的扩展程序**，选中解压出来的 **`steam-one-click-extensions`** 文件夹
